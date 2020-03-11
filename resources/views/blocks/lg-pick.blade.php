@@ -1,16 +1,10 @@
 @php
-    $lg = ['PL', 'ENG', 'RU', 'DE'];
+      $fb = get_field('facebook','option');
 @endphp
-
-@if ($lg)
-<ul class="lg-pick" data-lg-pick>
-    @foreach ($lg as $item)
-    <li class="lg-pick__item @if($item == 'RU') -is-active @endif">
-        <a class="lg-pick__wrapper text" href="#">
-            {{ $item }}
-            @if($item == 'RU') @include('svg.drop-down') @endif
+@if ($fb)
+    <div class="lg-pick">
+        <a class="lg-pick__wrapper text" href="{!! $fb !!}">
+            <i class="fab fa-facebook-f"></i>
         </a>
-    </li>
-    @endforeach
-</ul>
+    </div>
 @endif

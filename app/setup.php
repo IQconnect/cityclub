@@ -139,6 +139,7 @@ add_action('after_setup_theme', function () {
 /**
  * Initialize ACF Builder
  */
+
 add_action('init', function () {
     collect(glob(config('theme.dir').'/app/fields/*.php'))->map(function ($field) {
         return require_once($field);

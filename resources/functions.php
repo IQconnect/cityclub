@@ -235,18 +235,6 @@ function the_breadcrumb()
 @ini_set('post_max_size', '64M');
 @ini_set('max_execution_time', '300');
 
-class Placeholder
-{
-    function image()
-    {
-        return "images/bg-juno.jpg";
-    }
-
-    function title()
-    {
-        return 'Twoja bezpieczna przystań';
-    }
-}
 
 function image($id, $size, $class)
 {
@@ -267,47 +255,23 @@ function create_offert()
         // CPT Options
         array(
             'labels' => array(
-                'name' => __('Oferta gastronomiczna'),
+                'name' => __('Karta Menu'),
                 'singular_name' => __('Oferta')
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'oferty'),
-            'supports' => array('title', 'thumbnail')
+            'rewrite' => array('slug' => 'Menu'),
+            'supports' => array('title', 'thumbnail'),
+            'taxonomies' => array('category'),
         )
     );
 }
 // Hooking up our function to theme setup
 add_action('init', 'create_offert');
 
-// Our custom post type function
-function create_rooms()
-{
-
-    register_post_type(
-        'Pokoje',
-        // CPT Options
-        array(
-            'labels' => array(
-                'name' => __('Pokoje'),
-                'singular_name' => __('Pokoje')
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'pokoje'),
-            'supports' => array('title', 'thumbnail', 'gallery', 'editor'),
-            'show_in_rest' => true,
-            'menu_icon' => 'dashicons-admin-multisite',
-            'taxonomies'  => array('category'),
-        )
-    );
-}
-// Hooking up our function to theme setup
-add_action('init', 'create_rooms');
-
 function my_acf_init()
 {
-    acf_update_setting('google_api_key', 'AIzaSyDB6amgRAZXs7H65TQeg1w61AIG8-Zn7fk');
+    acf_update_setting('google_api_key', 'AIzaSyDqX_hqXzx0uZS2NcENrA2fkutTyXOHpMo');
 }
 
 add_action('acf/init', 'my_acf_init');

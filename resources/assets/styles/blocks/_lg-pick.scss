@@ -1,72 +1,30 @@
+/* stylelint-disable */
 .lg-pick {
   $root: &;
 
-  list-style: none;
   padding: 0;
   margin: 0;
   max-height: gutter(4);
-  background-color: $special;
-  color: $light;
-  fill: $light;
+  background-color: rgba($light, 0.4);
+  color: $special;
   overflow: hidden;
-  transition: $transition / 1.5 ease-in;
-  display: flex;
-  flex-direction: column;
+  transition: $transition;
 
-  &__item {
-    opacity: 0;
-    height: gutter(4);
-    border-top: 1px solid;
-    transition: $transition;
-
-    svg {
-      margin-left: gutter(0.8);
-      transition: $transition;
-      fill: $light;
-    }
-
-    &.-is-active {
-      opacity: 1;
-      border-top: 0;
-      order: -1;
-    }
-
-    &:hover {
-      background-color: $dark;
-
-      &.-is-active {
-        background-color: $special;
-      }
-    }
+  &:hover {
+    background-color: $dark;
   }
 
-  &__wrapper {
+  &__wrapper,
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: 0 gutter(1);
+    padding: gutter(0.5) gutter(1.2);
+    font-size: 25px;
 
     &:focus {
       outline: 0;
-    }
-  }
-
-  &:hover {
-    max-height: gutter(20);
-
-    #{$root}__item {
-      opacity: 1;
-
-      &.-is-active {
-        height: gutter(5.2);
-      }
-    }
-
-    #{$root}__wrapper {
-      svg {
-        transform: rotate(180deg);
-      }
     }
   }
 }

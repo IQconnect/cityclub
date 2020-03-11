@@ -30,6 +30,7 @@
 
 /** Components */
 @import "components/container";
+@import "components/section";
 @import "components/text";
 @import "components/button";
 
@@ -37,9 +38,13 @@
 @import "blocks/hamburger";
 @import "blocks/lg-pick";
 @import "blocks/nav";
+@import "blocks/contact-header";
 
 /** Layouts */
 @import "layouts/header";
+@import "layouts/hero";
+@import "layouts/textimg";
+@import "layouts/gallery";
 @import "layouts/footer";
 
 /** Pages */

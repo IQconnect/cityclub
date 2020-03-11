@@ -4,7 +4,20 @@
 }
 
 %special {
-  font-family: map-get($font-family, "special"), cursive;
+  font-family: map-get($font-family, "special");
+  letter-spacing: gutter(0.1);
+}
+
+%fancy {
+  font-family: map-get($font-family, "quote");
+}
+
+%main {
+  font-family: map-get($font-family, "main");
+}
+
+%normalize {
+  font-family: map-get($font-family, "normal");
 }
 
 .menu-link {
@@ -17,51 +30,51 @@
   }
 }
 
-.extra-title {
-  @extend %special;
-  @extend %text;
-
-  @include cssLock("font-size", 360, 1920, (gutter_num(3), gutter_num(10.4)));
-}
-
 .title {
-  @extend %special;
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(2.4), gutter_num(5.2)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(3.2), gutter_num(4)));
+
+  line-height: 1.3;
 }
 
 .subtitle {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(1.6), gutter_num(2.4)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(2.2), gutter_num(3.2)));
 
-  font-weight: 600;
-  line-height: gutter(2);
+  line-height: 1;
+}
+
+.small-title {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (gutter_num(1.4), gutter_num(2.5)));
 }
 
 .text {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(1.4), gutter_num(1.8)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(1.6), gutter_num(2)));
+
+  line-height: 1.5;
 }
 
 .major-text {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(2), gutter_num(3)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(2.2), gutter_num(2.4)));
 }
 
 .minor-text {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(1.2), gutter_num(1.6)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(1), gutter_num(1.2)));
 }
 
 blockquote,
 .blockquote {
   @extend %text;
-  @extend %special;
 
   @include cssLock("font-size", 360, 1920, (gutter_num(1.4), gutter_num(2.4)));
 

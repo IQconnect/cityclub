@@ -12,7 +12,8 @@ import './autoload/**/*';
 // import AOS from 'aos';
 
 import hamburger from './components/hamburger';
-
+import hero from './components/hero';
+import header from './components/header';
 
 /** Populate Router instance with DOM routes */
 // const routes = new Router({
@@ -28,4 +29,6 @@ import hamburger from './components/hamburger';
 jQuery(document).ready(() => {
   console.log('READY');
   hamburger.init();
+  hero.init();
+  header.init();
 });
