@@ -20,10 +20,14 @@ $option_page
         ->addWysiwyg('contact-header', ['label' => 'Tekst w Nagłówku', 'media_upload' => 0])
         ->addWysiwyg('contact-contact', ['label' => 'Tekst w Kontakcie', 'media_upload' => 0])
         ->addText('facebook' , ['label' =>'Adress Facebooka'])
+    ->addTab('Eventy', ['placement' => 'left'])
+        ->addText('eventtext',['label' => 'Tekst do przyciska'])
+        ->addText('eventurl', ['label' => 'Link do eventów'])
     ->addTab('Stopka', ['placement' => 'left'])
         ->addWysiwyg('right',['label' => 'Tekst w Stopce Copyright góra', 'media_upload' => 0])
         ->addWysiwyg('copyright',['label' => 'Tekst w Stopce Copyright dół', 'media_upload' => 0])
         ->addImage('iqlogo', ['label' => 'Wykonanie'])
     ;
+
 
 return $option_page;

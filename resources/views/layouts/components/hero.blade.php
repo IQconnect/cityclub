@@ -2,6 +2,8 @@
     $hero = $data['hero'];
     $content = option("contact-header");
     $title = option("upper");
+    $eventurl = option("eventurl");
+    $eventtext = option("eventtext");
     $logo = get_field('logo', 'options')['url']
 @endphp
 
@@ -29,7 +31,7 @@
         @if($content)
             <div class="hero__text subtitle">
                 {!! $content !!}
-                <a data-fancybox data-type="iframe" class="button button--buttonbg" data-src= {!!$buttonurl !!}>xxx{!! $buttonname !!}</a>
+                <a data-fancybox data-type="iframe" class="button button--buttonbg" data-src= {!!$eventurl !!}>{!! $eventtext !!}</a>
             </div>
         @endif
     </div>
