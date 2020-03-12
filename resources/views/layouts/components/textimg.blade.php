@@ -36,6 +36,7 @@
                     </div>
                     <div class="textimg__long">
                         {!! image($imglong, 'full', 'textimg__img') !!}
+                        
                     </div>
                 </div>
             </div>

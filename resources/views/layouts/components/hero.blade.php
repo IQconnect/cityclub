@@ -29,6 +29,7 @@
         @if($content)
             <div class="hero__text subtitle">
                 {!! $content !!}
+                <a data-fancybox data-type="iframe" class="button button--buttonbg" data-src= {!!$buttonurl !!}>xxx{!! $buttonname !!}</a>
             </div>
         @endif
     </div>
