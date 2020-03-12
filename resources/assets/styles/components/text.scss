@@ -16,10 +16,6 @@
   font-family: map-get($font-family, "main");
 }
 
-%normalize {
-  font-family: map-get($font-family, "normal");
-}
-
 .menu-link {
   @extend %text;
 
@@ -67,6 +63,12 @@
 }
 
 .minor-text {
+  @extend %text;
+
+  @include cssLock("font-size", 360, 1920, (gutter_num(1), gutter_num(1.5)));
+}
+
+.copyright {
   @extend %text;
 
   @include cssLock("font-size", 360, 1920, (gutter_num(1), gutter_num(1.2)));

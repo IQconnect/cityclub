@@ -4,9 +4,6 @@ $gallery = $data['gallery'];
 
 <section class="section">
   <div class="container">
-    @if($data['title'])
-      @include('partials.title', ['title' => $data['title'], 'subtitle' => $data['subtitle']])
-    @endif
     <div class="gallery">
       @php
         $galleryName = rand(1, 999);

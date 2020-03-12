@@ -8,5 +8,5 @@ $cat
 $cat
     ->addTab('Ustawienia główne', ['placement' => 'left'])
         ->addImage('thumbnail')
-        ->addImage('hero');
+        ->addImage('page');
 return $cat;

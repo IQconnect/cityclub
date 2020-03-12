@@ -7,6 +7,6 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $menu = new FieldsBuilder('menu');
 
 $menu
-		->addText('titlemenu', ['label' => 'Tytuł'])
-		->addTaxonomy('titlemenu', ['label' => 'Kategorie menu']);
+		->addText('titlemenu', ['label' => 'Menu'])
+		->addTaxonomy('categorymenu', ['label' => 'Kategorie menu']);
 return $menu;

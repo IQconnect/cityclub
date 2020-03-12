@@ -1,6 +1,6 @@
 .contact-header {
   @extend .subtitle;
-  @extend %normalize;
+  @extend %main;
 
   line-height: gutter(4);
   display: flex;

@@ -9,7 +9,7 @@ $config = (object) [
     'wrapper' => ['width' => 30],
 ];
 
-$gallery = new FieldsBuilder('gallery', ['label' => 'galeria']);
+$gallery = new FieldsBuilder('gallery', ['label' => 'Galeria']);
 
 $gallery
     ->addGallery('gallery',['label' => 'Galeria','max' => '8',]);

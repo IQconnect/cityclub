@@ -58,9 +58,10 @@
 
     li {
       @extend .subtitle;
-      @extend %normalize;
+      @extend %main;
 
       margin-bottom: gutter(2);
+      font-weight: 700;
       text-transform: uppercase;
       color: $dark;
 
