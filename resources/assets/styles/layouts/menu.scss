@@ -25,6 +25,24 @@
     margin: auto;
     font-weight: 500;
     letter-spacing: 0.1em;
+    position: relative;
+
+    &::after {
+      @extend %absolute;
+
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: -10%;
+      width: gutter(5);
+      height: gutter(0.5);
+      background-color: $special;
+
+      @include mediaTo("md") {
+        bottom: -50%;
+      }
+    }
   }
 
   &__catname {
@@ -37,11 +55,25 @@
 
   &__category {
     padding: gutter(2);
+
+    img {
+      transition: $transition;
+
+      &:hover {
+        outline: rgba($special, 0.6) solid gutter(0.3);
+        outline-offset: gutter(1);
+      }
+    }
   }
 
   &__image {
     @extend %image;
 
     object-fit: cover;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
   }
 }

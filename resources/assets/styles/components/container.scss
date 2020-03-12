@@ -5,14 +5,12 @@
   max-width: gutter(147);
   margin: 0 auto;
 
-  @include mediaTo(xl) {
-    @include cssLock("padding-left", 360, 1920, (gutter_num(3), gutter_num(5)));
-    @include cssLock(
-      "padding-right",
-      360,
-      1920,
-      (gutter_num(3), gutter_num(5))
-    );
+  @include cssLock("padding-left", 360, 1920, (gutter_num(3), gutter_num(5)));
+  @include cssLock("padding-right", 360, 1920, (gutter_num(3), gutter_num(5)));
+
+  @include mediaTo(md) {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &--fluid {

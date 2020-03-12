@@ -31,6 +31,10 @@
   &__brand-wrapper {
     z-index: 100;
     position: relative;
+
+    @include mediaTo(sm) {
+      display: none;
+    }
   }
 
   &__brand {

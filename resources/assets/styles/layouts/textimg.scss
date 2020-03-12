@@ -107,7 +107,7 @@
       background-color: $special;
 
       @include mediaTo(md) {
-        bottom: -60%;
+        bottom: -30%;
         left: unset;
       }
     }
@@ -135,6 +135,11 @@
       flex-direction: row;
       margin: auto;
     }
+
+    @include mediaTo(sm) {
+      flex-direction: column;
+      margin: auto;
+    }
   }
 
   &__squareup {
@@ -143,7 +148,7 @@
 
     //width: gutter(40);
     //height: gutter(35);
-    margin: 0 gutter(1) gutter(1);
+    margin: 0 gutter(1) gutter(0.5) 0;
 
     @include mediaTo(md) {
       margin: 5px;
@@ -154,7 +159,7 @@
     @include cssLock("width", 360, 1920, (gutter_num(25), gutter_num(40)));
     @include cssLock("height", 360, 1920, (gutter_num(25), gutter_num(35)));
 
-    margin: gutter(1) gutter(1) 0;
+    margin: gutter(0.5) gutter(1) 0 0;
 
     @include mediaTo(md) {
       margin: 5px;
@@ -163,7 +168,6 @@
 
   &__long {
     width: gutter(35);
-    margin-left: gutter(1);
 
     @include mediaTo(md) {
       display: none;
@@ -175,7 +179,6 @@
 
     @include mediaTo(sm) {
       max-height: gutter(20);
-      margin-bottom: gutter(3);
     }
   }
 }

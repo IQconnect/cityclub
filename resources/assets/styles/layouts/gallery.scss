@@ -9,10 +9,11 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  &__imagewrapper {
+    height: gutter(30);
+  }
+
   &__image {
     @extend %image;
-
-    object-fit: cover;
-    height: gutter(30);
   }
 }

@@ -1,6 +1,6 @@
 .button {
   @extend .major-text;
-  @extend %special;
+  @extend %main;
 
   @include cssLock("padding", 360, 1920, (gutter_num(1.5), gutter_num(3)));
   @include cssLock(
@@ -17,14 +17,13 @@
   );
 
   position: relative;
-  color: $special-dark;
-  border: gutter(0.2) solid;
-  border-radius: gutter(10);
+  border: gutter(0.2) solid $special;
   cursor: pointer;
   transition: $transition;
+  text-transform: uppercase;
 
   &:hover {
-    background-color: $special-dark;
+    background-color: $special;
     color: $light;
   }
 }

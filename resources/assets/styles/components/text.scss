@@ -45,7 +45,7 @@
 .small-title {
   @extend %text;
 
-  @include cssLock("font-size", 360, 1920, (gutter_num(1.4), gutter_num(2.5)));
+  @include cssLock("font-size", 360, 1920, (gutter_num(1.4), gutter_num(2.3)));
 }
 
 .text {

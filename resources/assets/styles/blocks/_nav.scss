@@ -4,7 +4,7 @@
   position: fixed;
   width: 0;
   height: 100vh;
-  background: $light;
+  background: $special-dark;
   z-index: 10;
   overflow: hidden;
   transition: $transition ease-out;
@@ -63,7 +63,7 @@
       margin-bottom: gutter(2);
       font-weight: 700;
       text-transform: uppercase;
-      color: $dark;
+      color: $light;
 
       &:hover {
         color: $special;
@@ -81,7 +81,7 @@
     opacity: 1;
 
     #{$root}__bg {
-      opacity: 0.4;
+      opacity: 0.35;
     }
 
     .menu,
